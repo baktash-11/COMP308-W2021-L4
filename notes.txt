@@ -1,0 +1,36 @@
+installing Mango Db
+Documet oriented database handle data diffrenetly 
+using hierachical documents in standard formats, such as json and xml 
+
+commands 
+show dbs                                //liste database
+use test                                //create new database
+show collections                        //shows the collection which is equal to tables 
+db.first.insert({"Name":"Baktash"})     //create a collection and insert a record
+db.first.find()                         //will show all the data in the collection
+db.first.drop                           //will drop the collection
+db.first.inset({"f_Name":"Baktash", "l_Name":"Sana", "age":35})
+//WriteResult({ "nInserted" : 1 })
+db.first.insert({"f_Name":"Samim", "l_Name":"Mohibzada", "age":25})
+db.first.find().pretty()                // display in json format or style
+db.first.find({"age":{$gt:30}});        //find the record who is age < 30
+db.first.update({"fName":"Samim"}, {"lName":"Moh"}) //the commond above will delete all the failds but lName and change the last name 
+db.first.update({"age":25}, {$set:{"l_Name":"Mohibzadah"}}) //to update a record searching by age and changing the last name 
+db.first.remove({"f_Name":"Baktash"})   //To remove a record 
+
+db.first.update({
+    "age":25
+    },{
+        $set:{
+            "age":28
+        }
+    },{
+        multi: true
+    
+})  //to update multi records at same time
+db.first.update({"age":25},{$set:{"age":28}},{multi: true})
+db.first.remove({})                     //will delete everything from database 
+db.first.remove({"f_Name":"Baktash"})   //will remove a record
+db.first.remove({"f_Name":"Baktash"}, true)   //will remove all records by this f_Name
+//https://docs.mongodb.com/manual/      //mongodb documentation   
+
