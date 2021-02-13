@@ -32,5 +32,8 @@ db.first.update({"age":25},{$set:{"age":28}},{multi: true})
 db.first.remove({})                     //will delete everything from database 
 db.first.remove({"f_Name":"Baktash"})   //will remove a record
 db.first.remove({"f_Name":"Baktash"}, true)   //will remove all records by this f_Name
-//https://docs.mongodb.com/manual/      //mongodb documentation   
+//https://docs.mongodb.com/manual/      //mongodb documentation 
 
+(Working with Mangodb)
+git remote rm origin                    //to remove an old remote (github) 
+npm i mongoose --save-dve
