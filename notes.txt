@@ -37,3 +37,13 @@ db.first.remove({"f_Name":"Baktash"}, true)   //will remove all records by this 
 (Working with Mangodb)
 git remote rm origin                    //to remove an old remote (github) 
 npm i mongoose --save-dve
+
+//steps
+1 set up database connection 
+2 defined a new route for contact
+
+    under contact routes we defined our model 
+    in model schema we defined a schema 
+    we exporeted the model pointing to the test database 
+
+    
